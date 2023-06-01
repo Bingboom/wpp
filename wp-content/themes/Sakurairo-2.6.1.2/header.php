@@ -111,19 +111,23 @@ $vision_resource_basepath = iro_opt('vision_resource_basepath');
 					</div>
 				<?php } else { ?>
 					<span class="site-title">
-						<span class="logolink moe-mashiro">
-							<a href="<?php bloginfo('url'); ?>">
-								<ruby>
-									<span class="sakuraso"><?php echo $mashiro_logo['text_a']; ?></span>
-									<span class="no"><?php echo $mashiro_logo['text_b']; ?></span>
-									<span class="shironeko"><?php echo $mashiro_logo['text_c']; ?></span>
-									<rp></rp>
-									<rt class="chinese-font"><?php echo $mashiro_logo['text_secondary']; ?></rt>
-									<rp></rp>
-								</ruby>
-							</a>
-						</span>
-					</span>
+                        <span class="logolink moe-mashiro">
+                           <a href="<?php bloginfo('url'); ?>">
+                              <ruby>
+                                 <?php if($mashiro_logo) { ?>
+                                    <span class="sakuraso"><?php echo $mashiro_logo['text_a']; ?></span>
+                                    <span class="no"><?php echo $mashiro_logo['text_b']; ?></span>
+                                    <span class="shironeko"><?php echo $mashiro_logo['text_c']; ?></span>
+                                    <rp></rp>
+                                    <rt class="chinese-font"><?php echo $mashiro_logo['text_secondary']; ?></rt>
+                                    <rp></rp>
+                                 <?php } else { ?>
+                    <span><?php bloginfo('name'); ?></span>
+                <?php } ?>
+            </ruby>
+        </a>
+    </span>
+                        </span>
 				<?php } ?>
 				<!-- logo end -->
 			</div><!-- .site-branding -->
